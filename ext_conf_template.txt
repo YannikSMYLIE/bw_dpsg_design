@@ -1,0 +1,26 @@
+﻿# cat=basic//10; type=int; label=Die Uid des Ordners in dem du deine SocialMedia Verlinkungen liegen hast.
+uidNavSocialMedia =
+
+# cat=basic//10; type=int; label=Die Uid des Ordners in dem du deine SocialMedia Verlinkungen liegen hast.
+uidNavSocialMedia =
+
+# cat=basic//10; type=int; label=Die Uid des Ordners in dem du deine Footer Verlinkungen liegen hast.
+uidNavFooter =
+
+# cat=basic//10; type=int; label=Die Uid des Ordners in dem du deine externen Footer Verlinkungen liegen hast.
+uidNavExtern =
+
+# cat=basic//10; type=int; label=Die Uid des Ordners in dem du deine Header Verlinkungen liegen hast.
+uidNavHeader =
+
+# cat=basic//10; type=string; label=Die Uids der Bilder welche sich im Header abwechseln sollen.
+uidsHeaderImages =
+
+# cat=basic//10; type=string; label=Name des Stammes welcher im Footer angezeigt werden soll.
+footerName =
+
+# cat=basic//10; type=string; label=Anschrift eines StaVos welcher im Footer angezeigt werden soll.
+footerAnschrift =
+
+# cat=basic//10; type=string; label=Telefonnummer eines StaVos welche im Footer angezeigt werden soll.
+footerTelefon =

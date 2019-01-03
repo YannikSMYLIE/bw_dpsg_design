@@ -1,0 +1,48 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+    <f:section name="Entry">
+
+    <li>
+        <!-- Bild -->
+        <div style="width: 100%; background: url('{f:uri.image(src : item.falImage.uid, treatIdAsReference : 1)}'); background-position: center center; background-size: cover;" class="img"></div>
+
+        <!-- Text -->
+        <div class="container d-block d-md-none">
+            <div class="caption-text" style="background: none; width: auto;">
+                <h3 class="caption-title" style="margin: 0;">{item.title}</h3>
+                <f:if condition="{item.description}">
+                    <div class="caption-body mt-2"><f:format.html>{item.description}</f:format.html></div>
+                </f:if>
+                <f:if condition="{item.link}">
+                    <div class="caption-link pt-2">
+                        <div class="btn btn-primary">
+                            <f:link.typolink parameter="{item.link}"><i class="fa fa-search" aria-hidden="true"></i> Weiterlesen...</f:link.typolink>
+                        </div>
+                    </div>
+                </f:if>
+            </div>
+        </div>
+
+
+        <!-- Text auf allen außer XS -->
+        <div class="container d-none d-md-block">
+            <div class="caption-text" style="background: none; width: auto;">
+                <h3 class="caption-title" style="background: rgba(255, 255, 255, 0.8); display: inline-block; max-width: 100%; padding: 10px; margin: 0;">{item.title}</h3>
+                <f:if condition="{item.description}">
+                    <div class="caption-body mt-2" style="background: rgba(255, 255, 255, 0.8); padding: 5px 10px; max-width: 30vw;"><f:format.html>{item.description}</f:format.html></div>
+                </f:if>
+            </div>
+            <f:if condition="{item.link}">
+                <div class="caption-link">
+                    <div class="btn btn-primary">
+                        <f:link.typolink parameter="{item.link}"><i class="fa fa-search" aria-hidden="true"></i> Weiterlesen...</f:link.typolink>
+                    </div>
+                </div>
+            </f:if>
+        </div>
+    </li>
+
+    </f:section>
+
+</div>

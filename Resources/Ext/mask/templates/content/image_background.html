@@ -1,0 +1,7 @@
+<f:link.typolink parameter="{data.header_link}">
+  <div style="background-color: {data.tx_mask_backgroundcolor}; height: inherit; position: relative;" class="text-center">
+    <f:for each="{data.image}" as="file">
+      <img src="/{file.originalFile.publicUrl}" style="max-width: 100%">
+    </f:for>
+  </div>
+</f:link.typolink>

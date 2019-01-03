@@ -1,0 +1,46 @@
+{
+    "tt_content": {
+        "elements": {
+            "image_background": {
+                "color": "#000000",
+                "columns": [
+                    "image",
+                    "tx_mask_backgroundcolor",
+                    "header_link"
+                ],
+                "description": "Ein Bild welches eine gewisse Hintergrundfarbe hat.",
+                "icon": "",
+                "key": "image_background",
+                "label": "Bild mit Hintergrundfarbe",
+                "labels": [
+                    "",
+                    "Hintergrundfarbe",
+                    ""
+                ],
+                "shortLabel": ""
+            }
+        },
+        "sql": {
+            "tx_mask_backgroundcolor": {
+                "tt_content": {
+                    "tx_mask_backgroundcolor": "tinytext"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_backgroundcolor": {
+                "config": {
+                    "default": "",
+                    "eval": "",
+                    "is_in": "",
+                    "max": "",
+                    "placeholder": "#FFFFFF",
+                    "size": "",
+                    "type": "input"
+                },
+                "exclude": "1",
+                "key": "backgroundcolor"
+            }
+        }
+    }
+}

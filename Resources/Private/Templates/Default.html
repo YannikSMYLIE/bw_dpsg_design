@@ -1,0 +1,26 @@
+<f:layout name="Default"></f:layout>
+
+<f:section name="Main">
+    <div class="container content">
+		<f:if condition="{f:cObject(typoscriptObjectPath : 'lib.nav.sub')}">
+			<f:then>
+				<div class="row">
+					<nav class="col-sm-3 sub">
+						<f:cObject typoscriptObjectPath="lib.nav.sub"></f:cObject>
+					</nav>
+					<main class="col-sm-9">
+						<f:cObject typoscriptObjectPath="lib.breadcrumb"></f:cObject>
+						<f:format.raw>{main}</f:format.raw>
+					</main>
+				</div>
+			</f:then>
+			<f:else>
+				<main>
+					<f:cObject typoscriptObjectPath="lib.breadcrumb"></f:cObject>
+					<f:format.raw>{main}</f:format.raw>
+				</main>
+			</f:else>
+		</f:if>
+	</div>
+
+</f:section>
