@@ -12,11 +12,12 @@
 
 	<div class="femanager_new">
 		<f:form
-            name="user"
-            object="{user}"
-            action="create"
-            enctype="multipart/form-data"
-            class="form-horizontal {f:if(condition:'{settings.new.validation._enable.client}',then:'feManagerValidation',else:'')}">
+			name="user"
+			object="{user}"
+			action="create"
+			enctype="multipart/form-data"
+			additionalAttributes="{data-femanager-plugin:data.uid}"
+			class="form-horizontal {f:if(condition:'{settings.new.validation._enable.client}',then:'feManagerValidation',else:'')}">
             <h2>
                 <f:translate key="titleCreateProfile" />
             </h2>
