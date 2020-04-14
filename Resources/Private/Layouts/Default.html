@@ -8,10 +8,10 @@
 	<div id="fullPage">
         <header id="header">
             <f:render partial="Header" />
-		    <f:render partial="Navigation" />
+		    <f:render partial="Header/Navigation" arguments="{nav_main : nav_main}" />
         </header>
 		<f:render section="Main"></f:render>
-		<f:render partial="Footer"></f:render>
+		<f:render partial="Footer" arguments="{nav_left : nav_footer_left, nav_extern : nav_footer_extern}"></f:render>
 	</div>
 </body>
 </html>

@@ -1,0 +1,41 @@
+<nav class="main navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+
+        <a href="/" style="margin-right: 15px;">
+            <f:image src="EXT:bw_dpsg_design/Resources/Public/Images/lilie.png" alt="Lilie der Deutschen Pfadfinderschaft St. Georg" title="Zur Startseite" style="" width="30" height="30" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <f:if condition="{nav_main}">
+            <nav class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <f:for each="{nav_main}" as="firstlevel">
+                        <li class="nav-item {f:if(condition : firstlevel.children, then : 'dropdown')} {f:if(condition : firstlevel.active, then : 'active')}">
+                            <f:if condition="{firstlevel.children}">
+                                <f:then>
+                                    <a href="{firstlevel.link}" title="{firstlevel.title}" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        {firstlevel.title}
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <f:for each="{firstlevel.children}" as="secondlevel">
+                                            <a href="{secondlevel.link}" title="{secondlevel.title}" class="nav-link">
+                                                {secondlevel.title}
+                                            </a>
+                                        </f:for>
+                                    </div>
+                                </f:then>
+                                <f:else>
+                                    <a href="{firstlevel.link}" title="{firstlevel.title}" class="nav-link">
+                                        {firstlevel.title}
+                                    </a>
+                                </f:else>
+                            </f:if>
+                        </li>
+                    </f:for>
+                </ul>
+            </nav>
+        </f:if>
+    </div>
+</nav>

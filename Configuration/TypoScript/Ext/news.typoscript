@@ -1,0 +1,38 @@
+plugin.tx_news {
+	view {
+		templateRootPaths {
+			2 = EXT:bw_dpsg_design/Resources/Ext/news/Private/Templates/
+		}
+		partialRootPaths {
+			2 = EXT:bw_dpsg_design/Resources/Ext/news/Private/Partials/
+		}
+	}
+
+	_LOCAL_LANG.de {
+		back-link = Zurück zur News Übersicht
+	}
+
+}
+
+config.tx_extbase {
+	objects {
+		GeorgRinger\News\Domain\Model\NewsDefault {
+			className = BoergenerWebdesign\BwDpsgDesign\Domain\Model\NewsDefault
+		}
+	}
+	persistence {
+		classes {
+			BoergenerWebdesign\BwDpsgDesign\Domain\Model\NewsDefault {
+				mapping {
+					tableName = tx_news_domain_model_news
+				}
+			}
+		}
+	}
+}
+
+page {
+	includeCSS {
+		bw_dpsg_design_news = EXT:bw_dpsg_design/Resources/Ext/news/Public/Css/news.scss
+	}
+}

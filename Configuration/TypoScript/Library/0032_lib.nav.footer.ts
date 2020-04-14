@@ -1,24 +1,31 @@
-# Meta-Navigation
-
-# Externe Seiten
-lib.nav.footer = HMENU
-lib.nav.footer {
-    special = directory
-    special.value  < settings.uidNavFooter.value
-    wrap = <ul>|</ul>
-
-    1 = TMENU
-    1 {
-        NO = 1
-        NO {
-            allWrap = <li>|</li>
-            stdWrap.htmlSpecialChars = 1
-            ATagTitle.field = abstract // description // subtitle // title
+# Internet Seiten Links
+page {
+    10 {
+        dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            10 {
+                special = directory
+                special.value = {$plugin.tx_bwdpsgdesign.settings.navigation.footer_left}
+                levels = 1
+                as = nav_footer_left
+                titleField = nav_title // title
+            }
         }
+    }
+}
 
-        CUR < .NO
-        CUR {
-            allWrap = <li class="active">|</li>
+# Externe Dienste
+page {
+    10 {
+        dataProcessing {
+            20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            20 {
+                special = directory
+                special.value = {$plugin.tx_bwdpsgdesign.settings.navigation.footer_extern}
+                levels = 1
+                as = nav_footer_extern
+                titleField = nav_title // title
+            }
         }
     }
 }

@@ -1,0 +1,17 @@
+<ul class="socialMedia mt-3">
+    <f:if condition="{f:cObject(typoscriptObjectPath : 'lib.socialmedia.facebook')}">
+        <li>
+            <f:link.external uri="{f:cObject(typoscriptObjectPath : 'lib.socialmedia.facebook')}"><i class="fab fa-fw fa-facebook-f"></i></f:link.external>
+        </li>
+    </f:if>
+    <f:if condition="{f:cObject(typoscriptObjectPath : 'lib.socialmedia.instagram')}">
+        <li>
+            <f:link.external uri="{f:cObject(typoscriptObjectPath : 'lib.socialmedia.instagram')}"><i class="fab fa-fw fa-instagram"></i></f:link.external>
+        </li>
+    </f:if>
+    <f:if condition="{f:cObject(typoscriptObjectPath : 'lib.socialmedia.email')}">
+        <li>
+            <f:link.email email="{f:cObject(typoscriptObjectPath : 'lib.socialmedia.email')}"><i class="fal fa-fw fa-envelope"></i> Kontakt</f:link.email>
+        </li>
+    </f:if>
+</ul>

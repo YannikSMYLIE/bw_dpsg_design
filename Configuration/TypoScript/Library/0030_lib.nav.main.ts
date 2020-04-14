@@ -1,57 +1,31 @@
 # Hauptnavigation
-lib.nav.main = COA
-lib.nav.main {
-    10 = HMENU
+page {
     10 {
-
-        1 = TMENU
-        1 {
-            expAll = 1
-            NO = 1
-            NO {
-                wrapItemAndSub = <li class="nav-item">|</li>
-                stdWrap.htmlSpecialChars = 1
-				ATagParams = class="nav-link"
-                ATagTitle.field = astract // description // subtitle // title
+        dataProcessing {
+            30 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            30 {
+                levels = 2
+                entryLevel = 0
+                expandAll = 1
+                as = nav_main
+                titleField = nav_title // title
             }
-
-            CUR < .NO
-            CUR {
-                wrapItemAndSub = <li class="nav-item active">|</li>
-            }
-
-            IFSUB < .NO
-            IFSUB {
-                wrapItemAndSub = <li class="nav-item dropdown">|</li>
-                ATagParams = class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                stdWrap.noTrimWrap = || <span class="caret"></span>|
-            }
-
-            ACTIFSUB < .IFSUB
-            ACTIFSUB.ATagParams = class="nav-link dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-
-            CURIFSUB < .ACTIFSUB
-        }
-
-        2 < .1
-        2 {
-            wrap = <div class="dropdown-menu">|</div>
-            NO {
-                wrapItemAndSub = 
-                stdWrap.htmlSpecialChars = 1
-				ATagParams = class="nav-link"
-                ATagTitle.field = astract // description // subtitle // title
-            }
-            CUR < .NO
-			
-
-            IFSUB >
-            CURIFSUB >
-            ACTIFSUB >
-
-            SPC = 1
-            SPC.allWrap = <li role="seperator" class="divider">|</li>
         }
     }
+}
 
+# Unterseiten
+page {
+    10 {
+        dataProcessing {
+            40 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            40 {
+                entryLevel = 1
+                expandAll = 1
+                levels = 2
+                as = nav_sub
+                titleField = nav_title // title
+            }
+        }
+    }
 }

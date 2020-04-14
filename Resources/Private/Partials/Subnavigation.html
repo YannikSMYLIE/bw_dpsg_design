@@ -1,0 +1,60 @@
+<f:if condition="{nav}">
+    <nav class="sub">
+        <ul class="level1">
+            <f:for each="{nav}" as="firstlevel">
+                <li>
+                    <div class="level level1 {f:if(condition : firstlevel.active, then : 'active')}">
+                        <div class="icon">
+                            <f:if condition="{firstlevel.active}">
+                                <f:then>
+                                    <f:if condition="{firstlevel.current}">
+                                        <f:then>
+                                            <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i>
+                                        </f:then>
+                                        <f:else>
+                                            <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i>
+                                        </f:else>
+                                    </f:if>
+                                </f:then>
+                                <f:else>
+                                    <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i>
+                                </f:else>
+                            </f:if>
+                        </div>
+                        <div class="text">
+                            <a href="{firstlevel.link}" title="{firstlevel.title}">
+                                {firstlevel.title}
+                            </a>
+                        </div>
+                    </div>
+
+                    <f:if condition="{firstlevel.children}">
+                        <ul class="level2">
+                            <f:for each="{firstlevel.children}" as="secondlevel">
+                                <li>
+                                    <div class="level level2 {f:if(condition : secondlevel.active, then : 'active')}">
+                                        <div class="icon">
+                                            <f:if condition="{secondlevel.active}">
+                                                <f:then>
+                                                    <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i>
+                                                </f:then>
+                                                <f:else>
+                                                    <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i>
+                                                </f:else>
+                                            </f:if>
+                                        </div>
+                                        <div class="text">
+                                            <a href="{secondlevel.link}" title="{secondlevel.title}">
+                                                {secondlevel.title}
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </f:for>
+                        </ul>
+                    </f:if>
+                </li>
+            </f:for>
+        </ul>
+    </nav>
+</f:if>

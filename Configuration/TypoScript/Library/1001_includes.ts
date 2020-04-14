@@ -4,9 +4,7 @@ page {
     # CSS
     includeCSS {
         dpsg = EXT:bw_dpsg_design/Resources/Public/Css/dpsg.css
-
-        bootstrap = EXT:bw_dpsg_design/Resources/ThirdParty/bootstrap/css/bootstrap.css
-        bootstrap.disableCompression = 1
+        dpsg_new = EXT:bw_dpsg_design/Resources/Public/Css/dpsg_new.scss
     }
 
     # JavaScript
@@ -20,9 +18,8 @@ page {
         fontawesome = EXT:bw_dpsg_design/Resources/ThirdParty/fontawesome/all.min.js
         fontawesome.disableCompression = 1
 
-        script = EXT:bw_dpsg_design/Resources/Public/JavaScript/script.js
     }
     includeJSFooter {
-
+        script = EXT:bw_dpsg_design/Resources/Public/JavaScript/script.js
     }
 }

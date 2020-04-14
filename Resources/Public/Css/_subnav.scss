@@ -1,0 +1,49 @@
+nav.sub {
+  font-size: 1.1em;
+  font-family: 'TheSerif';
+
+  a {
+    display: inline-block;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      padding: 0.4em 0.4em 0 0.4em;
+
+      &, a {
+        color: #003056;
+      }
+      .active * {
+        color: #b5152b;
+      }
+
+      div.level1 {
+        font-weight: bold;
+      }
+
+      div.level {
+        display: flex;
+        .icon {
+          width: 20px;
+          text-align: center;
+        }
+        .text {
+          flex-grow: 1;
+        }
+      }
+
+      ul.level2 {
+        padding: 0 0 0 9px;
+      }
+    }
+
+    &.level1 > li {
+      background: #fff;
+      margin: 0 0 1px 0;
+      padding: 0.6em;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+<!--
+	=====================
+		Partials/List/Item.html
+-->
+<div class="article articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="http://schema.org/Article">
+	<n:excludeDisplayedNews newsItem="{newsItem}"/>
+	<!-- header -->
+	<div class="row">
+		<div class="col-4">
+			<f:if condition="{newsItem.backgroundImage}">
+				<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+					<f:image image="{newsItem.backgroundImage}"
+							 title="{newsItem.backgroundImage.originalResource.title}"
+							 alt="{newsItem.backgroundImage.originalResource.alternative}"
+							 maxWidth="300"
+							 maxHeight="300"
+							class="img-fluid" />
+				</n:link>
+			</f:if>
+		</div>
+		<div class="col-8">
+			<div class="header">
+				<h3>
+					<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+						<span itemprop="headline">{newsItem.title}</span>
+					</n:link>
+				</h3>
+			</div>
+			<div class="mb-2">
+				<span class="news-list-date badge pl-0 pr-2">
+					<time itemprop="datePublished" datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
+						<f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
+					</time>
+				</span>
+				<f:for each="{newsItem.stufen}" as="stufe">
+					<f:render partial="List/Stufe" arguments="{stufe : stufe}" />
+				</f:for>
+			</div>
+
+			<p class="teaser-text">
+				<f:format.nl2br>{newsItem.teaser}</f:format.nl2br>
+			</p>
+			<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}" class="btn btn-primary btn-sm">
+				<f:translate key="more-link"/>
+			</n:link>
+		</div>
+	</div>
+</div>
+</html>

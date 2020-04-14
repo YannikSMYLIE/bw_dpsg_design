@@ -2,29 +2,42 @@ page = PAGE
 
 page {
     # Template
+    typeNum=0
+
     10 = FLUIDTEMPLATE
     10 {
-        partialRootPath = EXT:bw_dpsg_design/Resources/Private/Partials/
-        layoutRootPath = EXT:bw_dpsg_design/Resources/Private/Layouts/
+        format = html
+
+        layoutRootPaths {
+            0 = EXT:bw_dpsg_design/Resources/Private/Layouts/
+        }
+
+        partialRootPaths {
+            0 = EXT:bw_dpsg_design/Resources/Private/Partials/
+        }
+
+        templateRootPaths {
+            0 = EXT:bw_dpsg_design/Resources/Private/Templates/
+        }
 
         # Layouts
-        file.stdWrap.cObject = CASE
-        file.stdWrap.cObject {
+        templateName.stdWrap.cObject = CASE
+        templateName.stdWrap.cObject {
             key.data = pagelayout
 
-        # Default Layout
-        default = TEXT
-        default.value = EXT:bw_dpsg_design/Resources/Private/Templates/Default.html
+            # Default Layout
+            default = TEXT
+            default.value = Default
 
-        # Wenn Startseite
+            # Wenn Startseite
             pagets__1 = TEXT
-            pagets__1.value = EXT:bw_dpsg_design/Resources/Private/Templates/Homepage.html
+            pagets__1.value = Homepage
 
-        # Wenn Stufen
+            # Wenn Stufen
             pagets__2 = TEXT
-            pagets__2.value = EXT:bw_dpsg_design/Resources/Private/Templates/Stufen.html
+            pagets__2.value = Stufen
 
-        # Sonst
+            # Sonst
             pagets__3 < .default
         }
 

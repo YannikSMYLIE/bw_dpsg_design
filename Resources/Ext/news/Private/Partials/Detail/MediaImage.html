@@ -1,0 +1,16 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+
+<f:image image="{mediaElement}"
+		 title="{mediaElement.title}"
+		 alt="{mediaElement.alternative}"
+		 height="250c"
+		 width="250c"
+		 maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.detail.media.image.maxWidth)}"
+		 maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.detail.media.image.maxHeight)}"
+		 additionalAttributes="{itemprop:'image'}"
+		 class="img-fluid"
+/>
+
+</html>

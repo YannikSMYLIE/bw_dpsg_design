@@ -1,0 +1,11 @@
+TCEFORM.tt_content.header_layout {
+    altLabels {
+        0 = h2 - Themenueberschrift
+        1 = h1 - Seitenueberschrift
+        2 =
+        3 = h3 - Ueberschrift 3.Ordnung
+        4 = h4 - Ueberschrift 4.Ordnung
+        5 = h5 - Ueberschrift 5.Ordnung
+    }
+    removeItems = 2,4,5
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="messages" date="2017-09-25T11:26:06Z" product-name="bw_dpsg_design">
+		<header/>
+		<body>
+			<!-- tt_news -->
+			<trans-unit id="tx_news_domain_model_news.background_image">
+				<source>Hintergrundbild</source>
+			</trans-unit>
+			<trans-unit id="tx_news_domain_model_news.stufen">
+				<source>Stufen</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

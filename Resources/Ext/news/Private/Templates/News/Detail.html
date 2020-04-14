@@ -1,0 +1,72 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  xmlns:rx="http://typo3.org/ns/Reelworx/RxShariff/ViewHelper"
+	  data-namespace-typo3-fluid="true">
+
+<f:layout name="Detail" />
+
+<f:section name="content">
+	<f:if condition="{newsItem}">
+		<f:then>
+			<div class="backgroundImage" style="background-image: url('/{newsItem.backgroundImage.originalResource.publicUrl}');">
+				<div class="gradient"></div>
+			</div>
+
+			<div class="container text">
+				<div class="text-center">
+					<div class="header mb-3 mb-md-5">
+						<h2 itemprop="headline" class="mb-0">{newsItem.title}</h2>
+						<div class="news-list-date mb-2">
+							<time itemprop="datePublished" datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
+								<f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
+							</time>
+						</div>
+						<f:if condition="{newsItem.teaser}">
+							<!-- teaser -->
+							<p class="teaser text-center" itemprop="description">
+								<f:format.nl2br>{newsItem.teaser}</f:format.nl2br>
+							</p>
+						</f:if>
+						<f:if condition="{settings.backPid}">
+							<!-- Link Back -->
+							<div class="mt-2">
+								<f:link.page pageUid="{settings.backPid}" class="btn btn-primary btn-sm">
+									<f:translate key="back-link" />
+								</f:link.page>
+							</div>
+						</f:if>
+					</div>
+				</div>
+
+				<f:format.html>{newsItem.bodytext}</f:format.html>
+			</div>
+
+			<div class="container-fluid mt-5">
+				<f:render partial="Detail/MediaContainer" arguments="{media: newsItem.mediaNonPreviews, settings:settings}" />
+			</div>
+
+			<div class="container mt-5">
+				<f:if condition="{settings.backPid}">
+					<!-- Link Back -->
+					<div class="mb-2">
+						<f:link.page pageUid="{settings.backPid}" class="btn btn-light btn-lg btn-block">
+							<f:translate key="back-link" />
+						</f:link.page>
+					</div>
+				</f:if>
+
+				<f:render partial="Detail/Related" arguments="{allRelatedSorted : newsItem.allRelatedSorted}" />
+			</div>
+		</f:then>
+		<f:else>
+			<div class="container mt-3">
+				<h2>Artikel nicht gefunden.</h2>
+				<p>Leider konnten wir den gewünschten Artikel nicht finden!</p>
+				<f:link.page pageUid="{settings.backPid}" class="btn btn-light btn-lg btn-block">
+					<f:translate key="back-link" />
+				</f:link.page>
+			</div>
+		</f:else>
+	</f:if>
+</f:section>
+</html>

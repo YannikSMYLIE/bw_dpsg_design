@@ -1,0 +1,23 @@
+<f:if condition="{allRelatedSorted}">
+    <div class="related">
+        <h2>
+            <f:translate key="related-news" />
+        </h2>
+        <div class="row">
+            <f:for each="{allRelatedSorted}" as="related">
+                <div class="col-12 col-md-6 col-lg-4 mb-2 mb-md-0">
+                    <n:link newsItem="{related}" settings="{settings}" title="{related.title}">
+                        <div class="singleelement">
+                            <div class="image" style="background-image: url('/{related.backgroundImage.originalResource.publicUrl}');" class="text-center">
+                                <div class="background text-center">
+                                    <h3>{related.title}</h3>
+                                    <span class="news-related-news-date"><f:format.date format="{f:translate(key:'dateFormat')}">{related.datetime}</f:format.date></span>
+                                </div>
+                            </div>
+                        </div>
+                    </n:link>
+                </div>
+            </f:for>
+        </div>
+    </div>
+</f:if>

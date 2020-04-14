@@ -3,27 +3,19 @@
         <div class="row" style="align-items: stretch; height: 100%;">
             <div class="col-12 col-sm-3">
                 <div style="display: flex; height: 100%;flex-direction: column;justify-content: space-between;">
-                    <div style="width: 100%;">
-                        <p><strong><f:cObject typoscriptObjectPath="settings.footerName"></f:cObject></strong></p>
-                        <p>
-                            <f:cObject typoscriptObjectPath="settings.footerAnschrift"></f:cObject>
-                        </p>
-                        <p>
-                            <f:cObject typoscriptObjectPath="settings.footerTelefon"></f:cObject>
-                        </p>
-                    </div>
-                    <div style="width: 100%;">
-                        <f:cObject typoscriptObjectPath="lib.nav.footer"></f:cObject>
-                    </div>
+                    <f:render partial="Footer/Contact" />
+                    <nav style="width: 100%;">
+                        <f:render partial="Footer/Navigation" arguments="{nav : nav_left}" />
+                    </nav>
                 </div>
             </div>
             <div class="col-12 col-sm-3"></div>
             <div class="col-12 col-sm-3"></div>
             <div class="col-12 col-sm-3">
                 <div style="display: flex; height: 100%; flex-direction: column-reverse;">
-                    <div style="width: 100%;">
-                        <f:cObject typoscriptObjectPath="lib.nav.extern"></f:cObject>
-                    </div>
+                    <nav style="width: 100%;">
+                        <f:render partial="Footer/Navigation" arguments="{nav : nav_extern}" />
+                    </nav>
                 </div>
             </div>
         </div>

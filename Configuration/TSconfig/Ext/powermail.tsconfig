@@ -1,0 +1,25 @@
+TCEFORM {
+    tx_powermail_domain_model_field {
+        css {
+            addItems {
+                col6 = col-12 col-sm-6
+                col12 = col-12
+                checkbox-list = Liste von Checkboxen
+            }
+        }
+    }
+    tx_powermail_domain_model_page {
+        css {
+            addItems {
+                row = row
+            }
+        }
+    }
+    tx_powermail_domain_model_form {
+        css {
+            addItems {
+                headerCenter = Header-Center Überschrift
+            }
+        }
+    }
+}

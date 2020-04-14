@@ -1,0 +1,2 @@
+<INCLUDE_TYPOSCRIPT: source="DIR: ./Page" extensions="tsconfig">
+<INCLUDE_TYPOSCRIPT: source="DIR: ./Ext" extensions="tsconfig">
