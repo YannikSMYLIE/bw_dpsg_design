@@ -30,7 +30,7 @@
                     <h3>Passwort</h3>
                     <f:render partial="Fields/Password" arguments="{_all}" />
 
-
+                    <f:form.hidden name="token" value="{token}" />
                     <f:render partial="Fields/SubmitUpdate" arguments="{_all}" />
                 </f:form>
             </f:then>

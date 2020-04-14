@@ -230,3 +230,13 @@ footer li a:hover {
         padding: 10px;
     }
 }
+
+/* Powermail */
+.tx-powermail .checkbox-list .checkbox-container {
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 2px;
+}
+.tx-powermail .checkbox-list label {
+    line-height: 1rem;
+}

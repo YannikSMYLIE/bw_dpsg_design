@@ -19,11 +19,11 @@ plugin.tx_femanager {
     view {
         templateRootPath >
         templateRootPaths {
-            20 = EXT:bw_dpsg_design/Resources/Private/CustomTemplates/femanager/Templates/
+            20 = EXT:bw_dpsg_design/Resources/Ext/femanager/Private/Templates/
         }
         partialRootPath >
         partialRootPaths {
-            20 = EXT:bw_dpsg_design/Resources/Private/CustomTemplates/femanager/Partials/
+            20 = EXT:bw_dpsg_design/Resources/Ext/femanager/Private/Partials/
         }
     }
 

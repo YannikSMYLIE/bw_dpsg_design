@@ -1,3 +1,5 @@
+<INCLUDE_TYPOSCRIPT: source="DIR: ./Ext" extensions="txt">
+
 # Background-Layouts definieren
 mod.web_layout.BackendLayouts {
     # Startseite
