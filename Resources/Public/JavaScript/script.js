@@ -19,3 +19,40 @@ $(window).scroll(function() {
 
     //alert(topOffset);
 });*/
+
+// Lazy Load Bilder
+const lazyLoads = [];
+$(document).ready(function() {
+    const divs = $('*[data-lazy-img-bg]');
+
+    divs.each(function() {
+        lazyLoads.push($(this));
+    });
+    workOnLazyLoad();
+    workOnLazyLoad();
+    workOnLazyLoad();
+    workOnLazyLoad();
+});
+function workOnLazyLoad() {
+    if(!lazyLoads.length) {
+        return;
+    }
+    const div = lazyLoads.shift();
+    console.log(div);
+    const width = div.width();
+
+    let url = div.attr("data-lazy-img-bg");
+    if(width > 500) {
+        url = div.attr("data-lazy-img-bg-700");
+    } else if(width > 300) {
+        url = div.attr("data-lazy-img-bg-500");
+    } else if(width > 100) {
+        url = div.attr("data-lazy-img-bg-300");
+    }
+
+    $('<img/>').attr('src', url).on('load', function() {
+        $(this).remove();
+        div.css("background-image", "url('" + url + "')").hide().fadeIn();
+        workOnLazyLoad();
+    });
+}

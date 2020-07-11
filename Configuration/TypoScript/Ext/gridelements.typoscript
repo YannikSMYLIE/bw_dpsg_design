@@ -3,158 +3,27 @@
 ###############################################
 tt_content.gridelements_pi1.20.10.setup {
 
-# ID des gridelements
-    # 1 = 2-8-2
+    # Left Container floated
     1 < lib.gridelements.defaultGridSetup
     1 {
         columns {
-        # colPos ID
             1 < .default
-            1.wrap = |
-        # colPos ID
-            10 < .default
-            10.wrap = <div class="hidden-xs col-md-2"></div><div class="col-md-8">|</div><div class="hidden-xs col-md-2"></div>
-            # colPos ID
+            1.wrap = <div class="float-left mb-3 mr-md-3 w-md-50 w-lg-50 w-xl-50">|</div>
             2 < .default
             2.wrap = |
         }
-        wrap = <div class="row">|</div>
+        wrap = <div class="cleafix">|</div>
     }
 
-    # ID des gridelements
-    # 2 = 6-6
+    # Right Container floated
     2 < lib.gridelements.defaultGridSetup
     2 {
         columns {
-        # colPos ID
             1 < .default
-            1.wrap = <div class="col-12 col-md-6">|</div>
-            # colPos ID
+            1.wrap = <div class="float-right mb-3 ml-md-3 w-md-50 w-lg-50 w-xl-50">|</div>
             2 < .default
-            2.wrap = <div class="col-12 col-md-6">|</div>
+            2.wrap = |
         }
-        wrap = <div class="row">|</div>
-    }
-
-    # ID des gridelements
-    # 3 = 4-4-4
-    3 < lib.gridelements.defaultGridSetup
-    3 {
-        columns {
-        # colPos ID
-            1 < .default
-            1.wrap = <div class="col-md-4">|</div>
-            # colPos ID
-            0 < .default
-            0.wrap = <div class="col-md-4">|</div>
-            # colPos ID
-            2 < .default
-            2.wrap = <div class="col-md-4">|</div>
-        }
-        wrap = <div class="row">|</div>
-    }
-
-    # ID des gridelements
-    # 4 = 3-3-3-3
-    4 < lib.gridelements.defaultGridSetup
-    4 {
-        columns {
-        # colPos ID
-            11 < .default
-            11.wrap = <div class="col-12 col-sm-6 col-md-3">|</div>
-            # colPos ID
-            12 < .default
-            12.wrap = <div class="col-12 col-sm-6 col-md-3">|</div><div class="d-sm-none col-12" style="background-color: transparent; height: 10px;"></div>
-            # colPos ID
-            13 < .default
-            13.wrap = <div class="col-12 col-sm-6 col-md-3">|</div>
-            # colPos ID
-            14 < .default
-            14.wrap = <div class="col-12 col-sm-6 col-md-3">|</div>
-        }
-        wrap = <div class="row">|</div>
-    }
-
-    # ID des gridelements
-    # 2 = 8-4
-    5 < lib.gridelements.defaultGridSetup
-    5 {
-        columns {
-        # colPos ID
-            10 < .default
-            10.wrap = <div class="col-md-8">|</div>
-            # colPos ID
-            11 < .default
-            11.wrap = <div class="col-md-4">|</div>
-        }
-        wrap = <div class="row">|</div>
-    }
-
-    # ID des gridelements
-    # 6 = 6-3-3
-    6 < lib.gridelements.defaultGridSetup
-    6 {
-        columns {
-        # colPos ID
-            10 < .default
-            10.wrap = <div class="col-sm-12 col-md-6">|</div>
-            # colPos ID
-            11 < .default
-            11.wrap = <div class="col-sm-6 col-md-3">|</div>
-            # colPos ID
-            12 < .default
-            12.wrap = <div class="col-sm-6 col-md-3">|</div>
-        }
-        wrap = <div class="row termine">|</div>
-    }
-
-    # ID des gridelements
-    # 2 = 4-8
-    7 < lib.gridelements.defaultGridSetup
-    7 {
-        columns {
-            # colPos ID
-            10 < .default
-            10.wrap = <div class="col-md-4">|</div>
-            # colPos ID
-            11 < .default
-            11.wrap = <div class="col-md-8">|</div>
-        }
-        wrap = <div class="row">|</div>
-    }
-	
-	# Keyvisual-Slider
-    13 < lib.gridelements.defaultGridSetup
-    13 {
-        cObject = FLUIDTEMPLATE
-        cObject {
-            file = EXT:fp_misereor/Resources/ext/Gridelements/Templates/Slider.html
-        }
-
-        columns {
-            # colPos ID
-            42 < .default
-    #        42.renderObj.wrap = <div class="carousel-item">|</div>
-			42.renderObj = COA
-			42.renderObj {
-			 30 = LOAD_REGISTER
-			 30 {
-			   carCounter.data = register:carCounter
-			   carCounter.stdWrap.wrap = |+1
-			   carCounter.prioriCalc = 1
-			 }
-
-			 # Wrap around each carousel item, first is active!
-			 stdWrap.outerWrap = <div class="carousel-item">|</div>
-			 stdWrap.outerWrap.override = <div class="carousel-item active">|</div>
-			 stdWrap.outerWrap.override.if {
-			   equals.data = register:carCounter
-		#       equals.stdWrap.wrap = |%3
-		#       equals.prioriCalc = 1
-			   value = 1
-			 }
-			}
-        }
-        wrap = |
+        wrap = <div class="cleafix">|</div>
     }
 }

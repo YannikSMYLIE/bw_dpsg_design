@@ -2,3 +2,14 @@ tt_content.textmedia.dataProcessing.20 {
     maxGalleryWidth = 1200
     maxGalleryWidthInText = 600
 }
+lib.contentElement {
+    templateRootPaths {
+        200 = EXT:bw_dpsg_design/Resources/Ext/fluidstyledcontent/Private/Templates/
+    }
+    partialRootPaths {
+        200 = EXT:bw_dpsg_design/Resources/Ext/fluidstyledcontent/Private/Partials/
+    }
+    layoutRootPaths {
+        200 = EXT:bw_dpsg_design/Resources/Ext/fluidstyledcontent/Private/Layouts/
+    }
+}

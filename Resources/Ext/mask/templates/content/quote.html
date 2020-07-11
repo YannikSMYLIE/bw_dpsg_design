@@ -1,0 +1,22 @@
+<div class="p-3 clearfix mask-quote" style="background: rgba(0, 48, 86, 0.15); font-size: 0.8em;">
+  <f:if condition="{data.image -> f:count()}">
+    <f:alias map="{image : data.image.0}">
+      <div class="float-left float-md-none float-lg-left mr-3 mb-3 mr-md-0 mr-lg-3 mb-lg-3 w-xs-25 w-sm-25 w-lg-25 w-xl-25 text-center">
+        <f:image image="{image}" alt="{image.alternative}" title="{image.title}" width="200" height="200c" class="img-fluid rounded-circle" crop="1" />
+
+        <div style="margin-top: 5px;" class="text-center">
+          <em>{data.tx_mask_name}</em>
+        </div>
+      </div>
+    </f:alias>
+  </f:if>
+
+  <div class="text">
+    <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.bodytext}</f:format.html>
+  </div>
+  <f:if condition="{data.tx_mask_name} && {data.image -> f:count()} == 0">
+    <div style="margin-top: 10px;">
+      <em>{data.tx_mask_name}</em>
+    </div>
+  </f:if>
+</div>

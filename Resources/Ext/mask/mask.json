@@ -18,12 +18,38 @@
                     ""
                 ],
                 "shortLabel": ""
+            },
+            "quote": {
+                "color": "#000000",
+                "columns": [
+                    "tx_mask_name",
+                    "image",
+                    "bodytext"
+                ],
+                "description": "Ein Zitat einer einzelnen Person",
+                "icon": "fa-comment-o",
+                "key": "quote",
+                "label": "Zitat",
+                "labels": [
+                    "Name",
+                    "Profilbild",
+                    "Zitat"
+                ],
+                "options": {
+                    "2": "rte"
+                },
+                "shortLabel": "Zitat"
             }
         },
         "sql": {
             "tx_mask_backgroundcolor": {
                 "tt_content": {
                     "tx_mask_backgroundcolor": "tinytext"
+                }
+            },
+            "tx_mask_name": {
+                "tt_content": {
+                    "tx_mask_name": "tinytext"
                 }
             }
         },
@@ -40,6 +66,19 @@
                 },
                 "exclude": "1",
                 "key": "backgroundcolor"
+            },
+            "tx_mask_name": {
+                "config": {
+                    "default": "",
+                    "eval": "",
+                    "is_in": "",
+                    "max": "",
+                    "placeholder": "Name",
+                    "size": "",
+                    "type": "input"
+                },
+                "exclude": "1",
+                "key": "name"
             }
         }
     }

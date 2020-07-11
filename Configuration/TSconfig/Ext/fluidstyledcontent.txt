@@ -1,0 +1,10 @@
+TCEFORM {
+    tt_content {
+        layout {
+            removeItems = 2,3
+            altLabels {
+                1 = Galerie
+            }
+        }
+    }
+}

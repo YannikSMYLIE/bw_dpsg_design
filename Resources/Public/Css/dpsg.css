@@ -240,3 +240,8 @@ footer li a:hover {
 .tx-powermail .checkbox-list label {
     line-height: 1rem;
 }
+
+/* Mask */
+.mask-quote .text p:last-child {
+    margin-bottom: 0;
+}
