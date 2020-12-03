@@ -242,6 +242,21 @@ footer li a:hover {
 }
 
 /* Mask */
-.mask-quote .text p:last-child {
+.mask-quote .text p:last-child, .mask-box p:last-child {
     margin-bottom: 0;
+}
+
+.frame-type-form_formframework .help-block {
+    font-size: 0.8em;
+    display: inline-block;
+    color: gray;
+    line-height: 1.1em;
+    margin-top: 5px;
+}
+
+.ce-gallery, .ce-column, .ce-column figure, .ce-column video {
+    max-width: 100%;
+}
+.ce-column figure {
+    display: block !important;
 }

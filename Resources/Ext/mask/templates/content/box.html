@@ -1,0 +1,6 @@
+<div style="background-color: {data.tx_mask_backgroundcolor};" class="p-3 mask-box">
+    <f:if condition="{data.header}">
+        <p><strong>{data.header}</strong></p>
+    </f:if>
+    <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.bodytext}</f:format.html>
+</div>

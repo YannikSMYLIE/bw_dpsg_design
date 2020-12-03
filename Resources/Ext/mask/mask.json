@@ -1,6 +1,27 @@
 {
     "tt_content": {
         "elements": {
+            "box": {
+                "color": "#000000",
+                "columns": [
+                    "header",
+                    "tx_mask_backgroundcolor",
+                    "bodytext"
+                ],
+                "description": "Eine Box mit \u00dcberschrift, Text und Hintergrundfarbe.",
+                "icon": "fa-inbox",
+                "key": "box",
+                "label": "Box",
+                "labels": [
+                    "",
+                    "Hintergrundfarbe",
+                    ""
+                ],
+                "options": {
+                    "2": "rte"
+                },
+                "shortLabel": ""
+            },
             "image_background": {
                 "color": "#000000",
                 "columns": [
